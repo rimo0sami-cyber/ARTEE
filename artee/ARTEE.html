@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTEE | عالم الهدايا والطباعة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lavender-main: #A9A9A9;
+            --lavender-light: #A47DAB;
+            --white: #ffffff;
+            --text-gray: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-gray);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--lavender-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-right: 15px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--lavender-main);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: var(--lavender-light);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            color: var(--lavender-main);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Grid */
+        .products-grid {
+            padding: 40px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--lavender-light);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(155, 137, 179, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-info { padding: 20px; }
+
+        .product-info h3 {
+            color: var(--lavender-main);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .order-now {
+            background: var(--lavender-main);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--lavender-light);
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .creator {
+            font-size: 0.8rem;
+            color: var(--lavender-main);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* WhatsApp Button */
+        .wa-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 1001;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 1.8rem; }
+            .product-card img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/ARTEE.jpg" alt="ARTEE Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#printing">طباعة</a></li>
+                <li><a href="#acrylic">ميداليات</a></li>
+                <li><a href="#distribution">توزيعات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>ARTEE</h1>
+        <p>مصنوع بكل حب.. تفاصيل صغيرة تصنع ذكريات كبيرة</p>
+    </section>
+
+    <div class="products-grid">
+
+        <div class="product-card" id="printing">
+            <img src="images/stecrz.jpg" alt="منتجات الطباعة">
+            <div class="product-info">
+                <h3>طباعة وستيكرات</h3>
+                <a href="https://wa.me/201276662589" class="order-now" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="product-card" id="acrylic">
+            <img src="images/madelyat.jpg" alt="ميداليات اكرلك">
+            <div class="product-info">
+                <h3>ميداليات أكريليك</h3>
+                <a href="https://wa.me/201276662589" class="order-now" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="product-card" id="distribution">
+            <img src="images/tawzee3at.jpg" alt="توزيعات">
+            <div class="product-info">
+                <h3>توزيعات مناسبات</h3>
+                <a href="https://wa.me/201276662589" class="order-now" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة لمتجر ARTEE &copy; 2026</p>
+        <div class="creator">Designed by: RIHAM SAMI</div>
+    </footer>
+
+    <a href="https://wa.me/201276662589" class="wa-float" target="_blank">
+        تواصل معنا واتساب
+    </a>
+
+</body>
+</html>
